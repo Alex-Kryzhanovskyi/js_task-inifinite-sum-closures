@@ -8,7 +8,7 @@ function makeInfinityAdder() {
 
   function sumder(...args) {
     if (args.length !== 0) {
-      addedSum += args[0];
+      addedSum += args.reduce((acc, itemSum) => acc + itemSum, 0);
 
       return sumder;
     }
